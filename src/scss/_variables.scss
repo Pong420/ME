@@ -1,0 +1,23 @@
+$font-family: 微軟正黑體, Microsoft JhengHei, sans-serif;
+
+$black: #030711;
+$yellow: #fb0;
+
+$nav-height: 60px;
+
+$break-point-large: 1280px;
+$break-point-medium: 768px;
+$break-point-small: 480px;
+
+$max-width: 1280px;
+
+@mixin font-size($min, $max, $min-viewport, $max-viewport) {
+  font-size: calc(
+    #{$min}px + (#{$max} - #{$min}) * (100vw - #{$min-viewport}px) /
+      (#{$min-viewport} - #{$max-viewport})
+  );
+}
+
+@mixin font-family($font: '') {
+  font-family: $font, $font-family;
+}

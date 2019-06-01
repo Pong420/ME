@@ -1,0 +1,67 @@
+{
+  "name": "gatsby-starter-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "tslint": "tslint 'src/**/*.ts?(x)'",
+    "precommit": "lint-staged",
+    "component": "node scripts/component.js",
+    "page": "node scripts/page.js",
+    "get": "node scripts/get.js"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn tslint",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "lodash.random": "^3.2.0",
+    "object-fit-images": "^3.2.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "typeface-open-sans": "^0.0.54",
+    "typeface-raleway": "^0.0.54",
+    "typeface-roboto": "^0.0.54"
+  },
+  "devDependencies": {
+    "@types/lodash.random": "^3.2.6",
+    "@types/node": "^12.0.4",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-helmet": "^5.0.8",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "gatsby": "^2.8.2",
+    "gatsby-image": "^2.1.2",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-offline": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-resolve-src": "^2.0.0",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.1.3",
+    "gatsby-plugin-tslint": "^0.0.2",
+    "gatsby-plugin-typescript": "^2.0.15",
+    "gatsby-source-filesystem": "^2.0.38",
+    "gatsby-transformer-sharp": "^2.1.21",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "node-sass": "npm:sass",
+    "sass": "^1.20.3",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.1",
+    "webpack": "^4.32.2"
+  }
+}
