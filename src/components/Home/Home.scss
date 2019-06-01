@@ -1,7 +1,6 @@
 .home {
   .text {
-    @include font-family('Raleway');
-
+    @include typeface('Raleway');
     text-transform: uppercase;
 
     > div {
@@ -19,9 +18,9 @@
     @include flex(center, center);
 
     a {
+      @include typeface('Raleway');
       color: #fff;
       border-bottom: 2px dotted;
-      font-family: 'Raleway';
       text-align: center;
       text-transform: uppercase;
     }

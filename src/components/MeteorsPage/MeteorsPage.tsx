@@ -15,6 +15,10 @@ interface BackgroundQuery {
   };
 }
 
+const style = {
+  position: 'absolute'
+};
+
 export function MeteorsPage({ text = [], children, className }: Props) {
   return (
     <StaticQuery
@@ -24,15 +28,13 @@ export function MeteorsPage({ text = [], children, className }: Props) {
           <Img
             className="background"
             fluid={data.background.childImageSharp.fluid}
-            style={{
-              position: 'absolute'
-            }}
+            style={style}
           />
           <Meteors />
           <div className="container">
             <div className="text">
-              {text.map((str: string, i: number) => (
-                <div key={i}>{str}</div>
+              {text.map((str, index) => (
+                <div key={index}>{str}</div>
               ))}
             </div>
             {children}

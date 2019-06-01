@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 export interface SEOProps {
   title?: string;
@@ -22,66 +22,69 @@ export interface SiteMetadata {
   author: string;
 }
 
-export function SEO({ title, description, lang = 'en', meta = [], keywords = [] }: SEOProps) {
+export function SEO({
+  title,
+  description,
+  lang = 'en',
+  meta = [],
+  keywords = []
+}: SEOProps) {
+  const {
+    site: { siteMetadata }
+  } = useStaticQuery<SEOQuery>(detailsQuery);
+
+  const htmlAttributes = useMemo(() => ({ lang }), [lang]);
+  const defaultTitle = siteMetadata.title;
+  const metaDescription = description || siteMetadata.description;
+  const mergedMeta = useMemo(
+    () =>
+      [
+        {
+          content: metaDescription,
+          name: 'description'
+        },
+        {
+          content: defaultTitle,
+          property: `og:title`
+        },
+        {
+          content: metaDescription,
+          property: `og:description`
+        },
+        {
+          content: `website`,
+          property: `og:type`
+        },
+        {
+          content: `summary`,
+          name: `twitter:card`
+        },
+        {
+          content: siteMetadata.author,
+          name: `twitter:creator`
+        },
+        {
+          content: defaultTitle,
+          name: `twitter:title`
+        },
+        {
+          content: metaDescription,
+          name: `twitter:description`
+        },
+        {
+          content: keywords.join(`, `),
+          name: `keywords`
+        }
+      ].concat(meta),
+    [defaultTitle, metaDescription, siteMetadata.author]
+  );
+
   return (
-    <StaticQuery
-      query={detailsQuery}
-      render={(data: SEOQuery) => {
-        const defaultTitle = data.site.siteMetadata.title;
-        const metaDescription = description || data.site.siteMetadata.description;
-        return (
-          <Helmet
-            htmlAttributes={{
-              lang
-            }}
-            title={defaultTitle}
-            titleTemplate={title ? `%s | ${title}` : `%s`}
-            meta={[
-              {
-                content: metaDescription,
-                name: 'description'
-              },
-              {
-                content: defaultTitle,
-                property: `og:title`
-              },
-              {
-                content: metaDescription,
-                property: `og:description`
-              },
-              {
-                content: `website`,
-                property: `og:type`
-              },
-              {
-                content: `summary`,
-                name: `twitter:card`
-              },
-              {
-                content: data.site.siteMetadata.author,
-                name: `twitter:creator`
-              },
-              {
-                content: defaultTitle,
-                name: `twitter:title`
-              },
-              {
-                content: metaDescription,
-                name: `twitter:description`
-              }
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      content: keywords.join(`, `),
-                      name: `keywords`
-                    }
-                  : []
-              )
-              .concat(meta)}
-          />
-        );
-      }}
+    <Helmet
+      htmlAttributes={htmlAttributes}
+      title={defaultTitle}
+      titleTemplate={title ? `%s | ${title}` : `%s`}
+      meta={mergedMeta}
     />
   );
 }

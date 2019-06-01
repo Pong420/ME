@@ -1,6 +1,11 @@
 import React, { useLayoutEffect, useRef, RefObject } from 'react';
 import random from 'lodash.random';
 
+const meteors = new Array(8).fill(null);
+const MeteorsComponent = meteors.map((_, index) => (
+  <div className="meteor" key={index} />
+));
+
 export function Meteors() {
   const meteorsRef: RefObject<HTMLDivElement> = useRef(null);
 
@@ -30,7 +35,7 @@ export function Meteors() {
 
   return (
     <div className="meteors" ref={meteorsRef}>
-      {new Array(8).fill(null).map((_, index) => (
+      {meteors.map((_, index) => (
         <div className="meteor" key={index} />
       ))}
     </div>
