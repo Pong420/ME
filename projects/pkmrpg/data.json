@@ -1,0 +1,16 @@
+{
+  "prefix": "pkmrpg",
+  "date": "2015-12",
+  "name": "Pokemon RPG",
+  "type": "Self Project",
+  "platform": "web",
+  "thumbnail": {
+    "src": "pkmrpg_640.png",
+    "width": 640,
+    "height": 426
+  },
+  "options": {
+    "video": "pkmrpg.mp4",
+    "link": "https://pong-pkm.herokuapp.com/index.html"
+  }
+}

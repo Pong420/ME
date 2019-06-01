@@ -1,0 +1,15 @@
+{
+  "prefix": "taisiusyut",
+  "date": "2019-1",
+  "name": "睇小說",
+  "type": "Self Project",
+  "platform": "web",
+  "thumbnail": {
+    "src": "taisiusyut.png",
+    "width": 1480,
+    "height": 1000
+  },
+  "options": {
+    "github": "https://github.com/Pong420/taisiusyut"
+  }
+}

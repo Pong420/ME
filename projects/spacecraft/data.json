@@ -1,0 +1,16 @@
+{
+  "prefix": "spacecraft",
+  "date": "2017-12",
+  "name": "Spacecraft",
+  "type": "Self Project",
+  "platform": "web",
+  "thumbnail": {
+    "src": "spacecraft_640.png",
+    "width": 640,
+    "height": 368
+  },
+  "options": {
+    "github": "https://github.com/Pong420/Spacecraft",
+    "link": "https://socket-spacecraft.herokuapp.com/"
+  }
+}

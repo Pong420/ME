@@ -1,0 +1,13 @@
+{
+  "prefix": "resume",
+  "date": "2019-2",
+  "name": "Resume",
+  "type": "Self Project",
+  "platform": "web",
+  "thumbnail": {
+    "src": "resume.png",
+    "width": 1280,
+    "height": 739
+  },
+  "options": {}
+}

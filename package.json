@@ -8,8 +8,10 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop",
+    "dev": "yarn projects:dev & gatsby develop",
     "serve": "gatsby serve",
+    "projects": "node scripts/projects.js",
+    "projects:dev": "nodemon -e html,json --watch projects --exec \"yarn projects\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "tslint": "tslint 'src/**/*.ts?(x)'",
     "precommit": "lint-staged",

@@ -1,0 +1,15 @@
+{
+  "prefix": "viutv-desktop",
+  "name": "ViuTV Desktop ( Unofficial )",
+  "date": "2018-11",
+  "type": "Self Project",
+  "platform": "desktop",
+  "thumbnail": {
+    "src": "viutv-desktop.png",
+    "width": 1280,
+    "height": 720
+  },
+  "options": {
+    "video": "viutv.mp4"
+  }
+}

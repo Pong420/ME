@@ -1,0 +1,16 @@
+{
+  "prefix": "pokeguide",
+  "date": "2016-8",
+  "name": "Poke Guide",
+  "type": "Self Project",
+  "platform": "web",
+  "thumbnail": {
+    "src": "pokeguide_640.png",
+    "width": 640,
+    "height": 379
+  },
+  "options": {
+    "github": "https://github.com/Pong420/pokeguide",
+    "link": "https://poke-guide.herokuapp.com/app.html"
+  }
+}

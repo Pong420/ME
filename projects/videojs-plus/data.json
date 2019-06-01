@@ -1,0 +1,16 @@
+{
+  "prefix": "videojs-plus",
+  "name": "VideoJS Plus",
+  "date": "2018-9",
+  "type": "Self Project",
+  "platform": "web",
+  "thumbnail": {
+    "src": "videojs-plus.png",
+    "width": 1280,
+    "height": 720
+  },
+  "options": {
+    "github": "https://github.com/Pong420/videojs-plus",
+    "link": "https://pong420.github.io/videojs-plus/examples/"
+  }
+}

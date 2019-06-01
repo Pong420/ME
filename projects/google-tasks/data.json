@@ -1,0 +1,15 @@
+{
+  "prefix": "google-tasks-desktop",
+  "name": "Google Task Desktop",
+  "date": "2019-5",
+  "type": "Self Project",
+  "platform": "desktop",
+  "thumbnail": {
+    "src": "google-tasks.png",
+    "width": 1280,
+    "height": 525
+  },
+  "options": {
+    "github": "https://github.com/Pong420/google-tasks-desktop.git"
+  }
+}

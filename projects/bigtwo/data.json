@@ -1,0 +1,16 @@
+{
+  "prefix": "big-two",
+  "name": "BigTwo ( 鋤大Dee )",
+  "date": "2018-12",
+  "type": "Self Project",
+  "platform": "web",
+  "thumbnail": {
+    "src": "big-two.png",
+    "width": 1280,
+    "height": 727
+  },
+  "options": {
+    "github": "https://github.com/Pong420/Boardgame/tree/master/src/Game/BigTwo",
+    "link": "http://play-boardgame.herokuapp.com/#big-two"
+  }
+}

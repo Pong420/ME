@@ -1,0 +1,15 @@
+{
+  "prefix": "comic-reader",
+  "name": "Comic Reader",
+  "date": "2019-3",
+  "type": "Self Project",
+  "platform": "desktop",
+  "thumbnail": {
+    "src": "comic-reader.png",
+    "width": 1280,
+    "height": 835
+  },
+  "options": {
+    "github": "https://github.com/Pong420/Comic-Reader"
+  }
+}

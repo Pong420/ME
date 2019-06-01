@@ -1,0 +1,15 @@
+{
+  "prefix": "viu-mix-desktop",
+  "name": "ViuTV x ViuOTT Desktop",
+  "date": "2019-3",
+  "type": "Self Project",
+  "platform": "desktop",
+  "thumbnail": {
+    "src": "viu-mix.png",
+    "width": 1280,
+    "height": 720
+  },
+  "options": {
+    "video": "viu-mix.mp4"
+  }
+}
