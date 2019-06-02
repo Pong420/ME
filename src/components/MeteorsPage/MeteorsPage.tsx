@@ -34,7 +34,7 @@ export function MeteorsPage({ text = [], children, className }: Props) {
           <div className="container">
             <div className="text">
               {text.map((str, index) => (
-                <div key={index}>{str}</div>
+                <div key={str}>{str}</div>
               ))}
             </div>
             {children}

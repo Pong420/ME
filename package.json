@@ -33,7 +33,9 @@
     "react-helmet": "^5.2.1",
     "typeface-open-sans": "^0.0.54",
     "typeface-raleway": "^0.0.54",
-    "typeface-roboto": "^0.0.54"
+    "typeface-roboto": "^0.0.54",
+    "video.js": "^7.5.4",
+    "videojs-plus": "^1.5.2"
   },
   "devDependencies": {
     "@types/lodash.random": "^3.2.6",
@@ -41,6 +43,7 @@
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",
+    "@types/video.js": "^7.2.10",
     "eslint-config-react-app": "^4.0.1",
     "eslint-plugin-react-hooks": "^1.6.0",
     "gatsby": "^2.8.2",

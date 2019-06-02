@@ -5,11 +5,12 @@ import { Github } from '../Icons/Github';
 import { Telegram } from '../Icons/Telegram';
 
 const style = { marginTop: 20 };
+const text = ['i am', 'Pong', 'a web developer'];
 
 export function Home() {
   return (
     <>
-      <MeteorsPage className="home" text={['i am', 'Pong', 'a web developer']}>
+      <MeteorsPage className="home" text={text}>
         <div className="icons">
           <a href="https://github.com/Pong420" style={style} target="_blank">
             <Github width={35} />

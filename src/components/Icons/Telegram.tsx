@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, useMemo } from 'react';
 
 interface Props {
   color?: string;
@@ -7,8 +7,12 @@ interface Props {
 }
 
 export function Telegram({ color = '#fff', width = 40, style }: Props) {
+  const mergedStyle = useMemo(() => {
+    return { marginTop: '3px', ...style };
+  }, []);
+
   return (
-    <svg width={width} viewBox="0 0 54 54" fill="none" style={{ marginTop: '3px', ...style }}>
+    <svg width={width} viewBox="0 0 54 54" fill="none" style={mergedStyle}>
       <g>
         <rect x="-0.2" y="0.1" />
         <path

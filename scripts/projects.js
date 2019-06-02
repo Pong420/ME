@@ -27,7 +27,6 @@ const projects = fs
   .map(obj => {
     if (obj.type === 'Self Project') {
       obj.num = count;
-      obj.isProject = true;
 
       count++;
     }

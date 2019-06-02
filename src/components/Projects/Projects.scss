@@ -1,0 +1,26 @@
+.projects {
+  background-color: $black;
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+
+  .projects-content {
+    width: 100%;
+    margin: auto;
+
+    > * {
+      padding: 25px 20px;
+
+      > div {
+        max-width: $max-width;
+      }
+
+      &:nth-child(odd) {
+        background-color: #212121;
+      }
+      &:nth-child(even) {
+        background-color: #292929;
+      }
+    }
+  }
+}

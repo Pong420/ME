@@ -1,0 +1,15 @@
+.page-not-found {
+  .text {
+    @include typeface('Open Sans');
+
+    > div {
+      &:nth-last-child(n + 2) {
+        font-size: 4em;
+        line-height: 1em;
+      }
+      &:last-child {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
