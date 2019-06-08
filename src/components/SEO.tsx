@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
-import Helmet from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
+import socialmediashare from '../assets/socialmediashare.png';
+import Helmet from 'react-helmet';
 
 export interface SEOProps {
   title?: string;
@@ -20,6 +21,7 @@ export interface SiteMetadata {
   title: string;
   description: string;
   author: string;
+  domain: string;
 }
 
 export function SEO({
@@ -34,7 +36,7 @@ export function SEO({
   } = useStaticQuery<SEOQuery>(detailsQuery);
 
   const htmlAttributes = useMemo(() => ({ lang }), [lang]);
-  const defaultTitle = siteMetadata.title;
+  const { title: defaultTitle, domain } = siteMetadata;
   const metaDescription = description || siteMetadata.description;
   const mergedMeta = useMemo(
     () =>
@@ -50,6 +52,10 @@ export function SEO({
         {
           content: metaDescription,
           property: `og:description`
+        },
+        {
+          content: `${domain}${socialmediashare}`,
+          property: `og:image`
         },
         {
           content: `website`,
@@ -96,6 +102,7 @@ const detailsQuery = graphql`
         title
         description
         author
+        domain
       }
     }
   }
