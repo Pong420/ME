@@ -1,5 +1,3 @@
-## Gatsby Typescript Starter
+## Personal Website
 
-```
-gatsby new my-app https://github.com/Pong420/gatsby-starter-typescript
-```
+Build from [Pong420/gatsby-starter-typescript](https://github.com/Pong420/gatsby-starter-typescript)
