@@ -9,5 +9,7 @@
     "width": 1280,
     "height": 739
   },
-  "options": {}
+  "options": {
+    "github": "https://github.com/Pong420/ME"
+  }
 }
