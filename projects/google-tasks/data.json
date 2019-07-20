@@ -10,6 +10,7 @@
     "height": 525
   },
   "options": {
-    "github": "https://github.com/Pong420/google-tasks-desktop.git"
+    "github": "https://github.com/Pong420/google-tasks-desktop.git",
+    "video": "https://pong420.github.io/google-tasks-desktop/demo.mp4"
   }
 }

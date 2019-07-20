@@ -10,14 +10,9 @@ const defaultPlayerOptions = {
   autoplay: true
 };
 
-export type VideoSource =
-  | string
-  | videojs.Tech.SourceObject
-  | videojs.Tech.SourceObject[];
-
 export interface VideoProps {
   title: string;
-  videoSource: VideoSource;
+  videoSource: string;
   playerOptions?: videojs.PlayerOptions;
 }
 
@@ -32,9 +27,12 @@ export function Video({ title, videoSource, playerOptions = {} }: VideoProps) {
     };
 
     const player = videojs(videoElRef.current, mergedPlayerOptions);
+    const src = /http(s)?/.test(videoSource)
+      ? videoSource
+      : require(`../../assets/video/${videoSource}`);
 
     player.src({
-      src: require(`../../assets/video/${videoSource}`),
+      src,
       type: 'video/mp4'
     });
 
