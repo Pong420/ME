@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, CSSProperties } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Thumbnail } from '../../typings';
 import Img from 'gatsby-image';
@@ -22,10 +22,6 @@ interface QueryProps {
   };
 }
 
-interface ProjectScreenShot {
-  [key: string]: ChildImageSharp;
-}
-
 export function ScreenShot({ name, platform, thumbnail }: Props) {
   const {
     allFile: { edges }
@@ -33,7 +29,7 @@ export function ScreenShot({ name, platform, thumbnail }: Props) {
 
   const images = useMemo(
     () =>
-      edges.reduce<ProjectScreenShot>((result, { node }) => {
+      edges.reduce<Record<string, ChildImageSharp>>((result, { node }) => {
         const src = node.relativePath.replace('project/', '');
         result[src] = node.childImageSharp;
         return result;
@@ -42,7 +38,7 @@ export function ScreenShot({ name, platform, thumbnail }: Props) {
   );
 
   const { width, height, src } = thumbnail;
-  const style = useMemo(
+  const style = useMemo<CSSProperties>(
     () => ({
       height: 0,
       paddingBottom: (height / width) * 100 + '%'

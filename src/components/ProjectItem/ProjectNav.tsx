@@ -1,4 +1,4 @@
-import React, { useState, ReactNode, ButtonHTMLAttributes } from 'react';
+import React, { HTMLAttributes } from 'react';
 import { Player } from '../Player';
 import { Options } from '../../typings';
 import { useBoolean } from '../../utils/useBoolean';
@@ -14,7 +14,7 @@ interface Props {
   options: Options;
 }
 
-const Button: React.FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
+const Button: React.FC<HTMLAttributes<HTMLButtonElement>> = ({
   children,
   ...props
 }) => {

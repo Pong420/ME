@@ -10,23 +10,21 @@ const defaultPlayerOptions = {
   autoplay: true
 };
 
-export interface VideoProps {
+interface Props {
   title: string;
   videoSource: string;
-  playerOptions?: videojs.PlayerOptions;
 }
 
-export function Video({ title, videoSource, playerOptions = {} }: VideoProps) {
-  const videoElRef = useRef(null);
+export function Video({ title, videoSource }: Props) {
+  const videoElRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const mergedPlayerOptions = {
+    const playerOptions = {
       ...defaultPlayerOptions,
-      ...playerOptions,
       title
     };
 
-    const player = videojs(videoElRef.current, mergedPlayerOptions);
+    const player = videojs(videoElRef.current, playerOptions);
     const src = /http(s)?/.test(videoSource)
       ? videoSource
       : require(`../../assets/video/${videoSource}`);
@@ -39,7 +37,7 @@ export function Video({ title, videoSource, playerOptions = {} }: VideoProps) {
     return () => {
       player.dispose();
     };
-  }, [playerOptions, title, videoSource]);
+  }, [title, videoSource]);
 
   return <video ref={videoElRef} />;
 }

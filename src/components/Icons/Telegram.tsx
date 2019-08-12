@@ -7,9 +7,10 @@ interface Props {
 }
 
 export function Telegram({ color = '#fff', width = 40, style }: Props) {
-  const mergedStyle = useMemo(() => {
-    return { marginTop: '3px', ...style };
-  }, []);
+  const mergedStyle = useMemo<CSSProperties>(
+    () => ({ marginTop: '3px', ...style }),
+    []
+  );
 
   return (
     <svg width={width} viewBox="0 0 54 54" fill="none" style={mergedStyle}>

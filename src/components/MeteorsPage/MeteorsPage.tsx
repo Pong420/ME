@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, CSSProperties } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Meteors } from './Meteors';
 import Img from 'gatsby-image';
@@ -15,7 +15,7 @@ interface BackgroundQuery {
   };
 }
 
-const style = {
+const style: CSSProperties = {
   position: 'absolute'
 };
 
@@ -33,7 +33,7 @@ export function MeteorsPage({ text = [], children, className }: Props) {
           <Meteors />
           <div className="container">
             <div className="text">
-              {text.map((str, index) => (
+              {text.map(str => (
                 <div key={str}>{str}</div>
               ))}
             </div>

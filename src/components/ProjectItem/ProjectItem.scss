@@ -70,7 +70,6 @@ $font-size: 120px;
     .project-info,
     .screenshot-container {
       @include padding-y(5%);
-
       align-self: stretch;
     }
 

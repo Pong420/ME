@@ -3,10 +3,6 @@ import { ScreenShot } from './ScreenShot';
 import { ProjectNav } from './ProjectNav';
 import { Schema$Project } from '../../typings';
 
-interface Options {
-  [key: string]: string;
-}
-
 interface Props extends Schema$Project {
   matches: boolean;
 }
@@ -29,7 +25,6 @@ export function ProjectItem({
   date
 }: Props) {
   const [mounted, setMounted] = useState(false);
-
   const html = useMemo(
     () => ({
       __html: description.replace(/<a\s+href=/g, '<a target="_blank" href=')

@@ -1,12 +1,12 @@
-import React, { useLayoutEffect, useRef, RefObject } from 'react';
+import React, { useEffect, useRef } from 'react';
 import random from 'lodash.random';
 
 const meteors = new Array(8).fill(null);
 
 export function Meteors() {
-  const meteorsRef: RefObject<HTMLDivElement> = useRef(null);
+  const meteorsRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const meteors = meteorsRef.current!.querySelectorAll('.meteor');
 
     const animate = (meteor: HTMLDivElement) => {
