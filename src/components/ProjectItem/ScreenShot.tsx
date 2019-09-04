@@ -34,7 +34,7 @@ export function ScreenShot({ name, platform, thumbnail }: Props) {
         result[src] = node.childImageSharp;
         return result;
       }, {}),
-    []
+    [edges]
   );
 
   const { width, height, src } = thumbnail;

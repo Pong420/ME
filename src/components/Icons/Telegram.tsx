@@ -9,7 +9,7 @@ interface Props {
 export function Telegram({ color = '#fff', width = 40, style }: Props) {
   const mergedStyle = useMemo<CSSProperties>(
     () => ({ marginTop: '3px', ...style }),
-    []
+    [style]
   );
 
   return (

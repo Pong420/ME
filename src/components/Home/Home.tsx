@@ -12,10 +12,20 @@ export function Home() {
     <>
       <MeteorsPage className="home" text={text}>
         <div className="icons">
-          <a href="https://github.com/Pong420" style={style} target="_blank">
+          <a
+            href="https://github.com/Pong420"
+            style={style}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Github width={35} />
           </a>
-          <a href="https://t.me/Pong420" style={style} target="_blank">
+          <a
+            href="https://t.me/Pong420"
+            style={style}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Telegram width={39.5} />
           </a>
         </div>
