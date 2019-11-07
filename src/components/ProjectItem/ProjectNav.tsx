@@ -40,7 +40,7 @@ function NavItem({ title, type, value }: NavItemProps) {
   }
 
   return (
-    <a href={value} target="_blank">
+    <a href={value} target="_blank" rel="noopener noreferrer">
       <Button>{type}</Button>
     </a>
   );

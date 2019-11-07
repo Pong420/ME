@@ -10,7 +10,6 @@
     "projects": "node scripts/projects.js",
     "projects:dev": "nodemon -e html,json --watch projects --exec \"yarn projects\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "tslint": "tslint 'src/**/*.ts?(x)'",
     "eslint": "eslint 'src/**/*.ts?(x)'",
     "component": "node scripts/component.js",
     "page": "node scripts/page.js",
@@ -22,8 +21,8 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "yarn tslint",
+    "*.{js,ts,tsx}": [
+      "eslint",
       "git add"
     ]
   },
@@ -36,39 +35,33 @@
     "typeface-open-sans": "^0.0.75",
     "typeface-raleway": "^0.0.75",
     "typeface-roboto": "^0.0.75",
-    "video.js": "^7.6.0",
-    "videojs-plus": "^1.5.4"
+    "video.js": "^7.6.5",
+    "videojs-plus": "^1.5.7"
   },
   "devDependencies": {
     "@types/lodash.random": "^3.2.6",
-    "@types/node": "^12.7.4",
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
-    "@types/react-helmet": "^5.0.9",
-    "@types/video.js": "^7.2.14",
-    "eslint-config-react-app": "^5.0.1",
-    "eslint-plugin-react-hooks": "^2.0.1",
-    "gatsby": "^2.15.6",
-    "gatsby-image": "^2.2.17",
-    "gatsby-plugin-manifest": "^2.2.13",
-    "gatsby-plugin-offline": "^3.0.2",
-    "gatsby-plugin-react-helmet": "^3.1.6",
+    "@types/node": "^12.12.6",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-helmet": "^5.0.14",
+    "@types/video.js": "^7.3.2",
+    "eslint-config-react-app": "^5.0.2",
+    "gatsby": "^2.17.10",
+    "gatsby-image": "^2.2.30",
+    "gatsby-plugin-manifest": "^2.2.26",
+    "gatsby-plugin-offline": "^3.0.18",
+    "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-resolve-src": "^2.0.0",
-    "gatsby-plugin-sass": "^2.1.13",
-    "gatsby-plugin-sharp": "^2.2.19",
-    "gatsby-plugin-tslint": "^0.0.2",
-    "gatsby-plugin-typescript": "^2.1.6",
-    "gatsby-source-filesystem": "^2.1.21",
-    "gatsby-transformer-sharp": "^2.2.13",
-    "husky": "^3.0.5",
-    "lint-staged": "^9.2.5",
-    "nodemon": "^1.19.2",
-    "sass": "^1.22.10",
-    "tslint": "^5.19.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-loader": "^3.5.4",
-    "tslint-react": "^4.0.0",
-    "typescript": "3.6.2",
-    "webpack": "^4.39.3"
+    "gatsby-plugin-sass": "^2.1.20",
+    "gatsby-plugin-sharp": "^2.2.36",
+    "gatsby-plugin-typescript": "^2.1.15",
+    "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-transformer-sharp": "^2.3.2",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "nodemon": "^1.19.4",
+    "sass": "^1.23.3",
+    "typescript": "3.7.2",
+    "webpack": "^4.41.2"
   }
 }
