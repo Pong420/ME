@@ -1,4 +1,4 @@
-import React, { useMemo, CSSProperties } from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Thumbnail } from '../../typings';
 import Img from 'gatsby-image';
@@ -22,38 +22,36 @@ interface QueryProps {
   };
 }
 
-export function ScreenShot({ name, platform, thumbnail }: Props) {
+export const ScreenShot = React.memo(({ name, platform, thumbnail }: Props) => {
   const {
     allFile: { edges }
   } = useStaticQuery<QueryProps>(query);
 
-  const images = useMemo(
-    () =>
-      edges.reduce<Record<string, ChildImageSharp>>((result, { node }) => {
-        const src = node.relativePath.replace('project/', '');
-        result[src] = node.childImageSharp;
-        return result;
-      }, {}),
-    [edges]
+  const images = edges.reduce<Record<string, ChildImageSharp>>(
+    (result, { node }) => {
+      const src = node.relativePath.replace('project/', '');
+      result[src] = node.childImageSharp;
+      return result;
+    },
+    {}
   );
 
   const { width, height, src } = thumbnail;
-  const style = useMemo<CSSProperties>(
-    () => ({
-      height: 0,
-      paddingBottom: (height / width) * 100 + '%'
-    }),
-    [width, height]
-  );
 
   return (
     <div className={`screenshot ${platform}`} title={name}>
-      <div className="img-wrapper" style={style}>
+      <div
+        className="img-wrapper"
+        style={{
+          height: 0,
+          paddingBottom: (height / width) * 100 + '%'
+        }}
+      >
         <Img {...images[src]} />
       </div>
     </div>
   );
-}
+});
 
 const query = graphql`
   query Screenshot {

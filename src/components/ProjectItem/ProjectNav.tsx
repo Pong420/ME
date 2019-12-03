@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
 import { Player } from '../Player';
 import { Options } from '../../typings';
 import { useBoolean } from '../../utils/useBoolean';
@@ -14,24 +14,13 @@ interface Props {
   options: Options;
 }
 
-const Button: React.FC<HTMLAttributes<HTMLButtonElement>> = ({
-  children,
-  ...props
-}) => {
-  return (
-    <button {...props} onMouseUp={evt => evt.currentTarget.blur()}>
-      {children}
-    </button>
-  );
-};
-
-function NavItem({ title, type, value }: NavItemProps) {
+const NavItem = React.memo<NavItemProps>(({ title, type, value }) => {
   const [playVideo, { on, off }] = useBoolean();
 
   if (type === 'video') {
     return (
       <>
-        <Button onClick={on}>Video</Button>
+        <button onClick={on}>Video</button>
         {playVideo && (
           <Player title={title} videoSource={value} onClose={off} />
         )}
@@ -41,22 +30,22 @@ function NavItem({ title, type, value }: NavItemProps) {
 
   return (
     <a href={value} target="_blank" rel="noopener noreferrer">
-      <Button>{type}</Button>
+      <button>{type}</button>
     </a>
   );
-}
+});
 
-export function ProjectNav({ title, options }: Props) {
+export const ProjectNav = React.memo<Props>(({ title, options }) => {
   return (
     <div className="project-nav">
       {Object.keys(options).map(type => {
         const value = options[type];
         return (
           <div className="project-nav-item" key={type}>
-            <NavItem type={type} value={value} title={title} />
+            <NavItem {...{ type, value, title }} />
           </div>
         );
       })}
     </div>
   );
-}
+});

@@ -3,7 +3,8 @@ import videojs from 'video.js';
 import 'videojs-plus';
 import 'videojs-plus/dist/videojs-plus.css';
 
-(window as any).videojs = videojs;
+// @ts-ignore
+window.videojs = videojs;
 
 const defaultPlayerOptions = {
   aspectRatio: '16:9',
