@@ -1,0 +1,15 @@
+{
+  "prefix": "fullstack",
+  "name": "Learn Full-Stack Development",
+  "date": "2019-10",
+  "type": "Self Project",
+  "platform": "web",
+  "thumbnail": {
+    "src": "fullstack.png",
+    "width": 1280,
+    "height": 720
+  },
+  "options": {
+    "github": "https://github.com/Pong420/fullstack"
+  }
+}
