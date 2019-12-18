@@ -9,8 +9,12 @@ interface Props extends VideoProps {
 
 const Video = lazy(() => import('./Video' /* webpackChunkName: "video" */));
 
-const el = document.createElement('div');
-document.body.appendChild(el);
+let el: HTMLDivElement;
+// for gastby build
+if (typeof document !== 'undefined') {
+  el = document.createElement('div');
+  document.body.appendChild(el);
+}
 
 export function Player({ title, videoSource, onClose }: Props) {
   return createPortal(
