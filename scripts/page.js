@@ -16,13 +16,10 @@ if (!fs.existsSync(dir)) {
 
 const content = `
   import React from 'react';
-  import { Layout } from '../components/Layout';
 
   export default function() {
     return (
-      <Layout>
-        
-      </Layout>
+     
     );
   }
   `;
