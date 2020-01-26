@@ -6,15 +6,6 @@ module.exports = {
     domain: 'https://pong420.netlify.com'
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /assets.*.svg/
-        }
-      }
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
@@ -23,6 +14,14 @@ module.exports = {
       options: {
         name: 'projects',
         path: `${__dirname}/projects`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets.*.svg/
+        }
       }
     },
     {
@@ -45,6 +44,7 @@ module.exports = {
         addSassLoader: false
       }
     },
+    'gatsby-plugin-react-helmet',
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-manifest`,
