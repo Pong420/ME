@@ -1,0 +1,52 @@
+$topHeight: 20px;
+
+.screenshot {
+  &.web {
+    position: relative;
+    border: 3px solid #ddd;
+    border-top: $topHeight solid #ddd;
+    border-radius: 3px 3px 1px 1px;
+
+    &:before {
+      $spotSize: 9px;
+      @include sq-dimen(9px);
+      @include absolute(($topHeight - $spotSize) / -2 - $spotSize, null, 5px);
+
+      content: '';
+      background: #ff5f57;
+      border-radius: 50%;
+      box-shadow: #{$spotSize * 2} 0 0 #ffbd2e, #{$spotSize * 4} 0 0 #28ca41;
+    }
+
+    &:after {
+      @include dimen(100%);
+      @include absolute(-$topHeight, null, 0);
+
+      content: attr(title);
+      color: #333;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: $topHeight;
+      text-align: center;
+    }
+
+    .img-wrapper {
+      &:after {
+        @include absolute(0, null, 0);
+        @include sq-dimen(100%);
+
+        content: '';
+        box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+
+  .img-wrapper {
+    position: relative;
+  }
+
+  .gatsby-image-wrapper {
+    @include position(0, null, 0, $position: absolute !important);
+    @include sq-dimen(100%);
+  }
+}

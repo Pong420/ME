@@ -30,3 +30,21 @@ export interface Fluid {
   srcSet: string;
   sizes: string;
 }
+
+export interface Schema$Project {
+  content: string;
+  data: {
+    slug: string;
+    date: string;
+    title: string;
+    platform: 'web' | 'desktop';
+    screenshot: {
+      childImageSharp: ChildImageSharp;
+    };
+    github?: string;
+    link?: string;
+    video?: {
+      publicURL: string;
+    };
+  };
+}
