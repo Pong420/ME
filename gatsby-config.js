@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Typescript Starter`,
-    description: ``,
-    author: `@author`
+    title: `Pong | Web Developer`,
+    description: `I am Pong, a web developer`,
+    author: `@Pong`,
+    domain: 'https://pong420.netlify.com'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -44,6 +45,19 @@ module.exports = {
         addSassLoader: false
       }
     },
-    `gatsby-plugin-typescript`
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Pong420',
+        short_name: 'Pong420',
+        icon: 'src/assets/github_512x512.png',
+        start_url: './index.html',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#000000'
+      }
+    },
+    'gatsby-plugin-offline'
   ]
 };
