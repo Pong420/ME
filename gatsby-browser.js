@@ -1,5 +1,5 @@
 const React = require('react');
-const { Layout } = require('./src/components/layout');
+const { Layout } = require('./src/components/Layout');
 
 require('typeface-roboto');
 require('typeface-raleway');
