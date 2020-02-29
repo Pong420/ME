@@ -4,7 +4,7 @@ date: '2019-03'
 title: 'ViuTV x ViuOTT Desktop'
 platform: 'desktop'
 screenshot: './viu-mix.png'
-github: 'https://github.com/Pong420/Comic-Reader'
+video: './viu-mix.mp4'
 ---
 
 This an unofficial <a href="https://viu.tv/">ViuTv</a> desktop application using

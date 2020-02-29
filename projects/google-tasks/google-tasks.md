@@ -4,8 +4,8 @@ date: '2019-05'
 title: 'Google Tasks Desktop'
 platform: 'desktop'
 screenshot: './google-tasks.png'
-video: https://pong420.github.io/google-tasks-desktop/demo.mp4
 github: 'https://github.com/Pong420/google-tasks-desktop.git'
+video: 'goole-taks.mp4'
 ---
 
 Unoffical <span>Google Tasks Desktop Client</span>. Build with <span>ElectronJS</span>, <span>React</span>,
