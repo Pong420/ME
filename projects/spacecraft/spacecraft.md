@@ -5,7 +5,7 @@ title: 'Spacecraft'
 platform: 'web'
 screenshot: './spacecraft_640.png'
 github: 'https://github.com/Pong420/Spacecraft'
-link: 'https://pong-pkm.herokuapp.com/index.html'
+link: 'https://socket-spacecraft.herokuapp.com/'
 ---
 
 <span>Spacecraft</span> is a simple <a class="link" href="https://socket.io/">Socket.io</a> game prototype. User can use
