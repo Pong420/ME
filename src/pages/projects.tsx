@@ -9,7 +9,7 @@ interface Data {
   };
 }
 
-export default function({ data }: RouteComponentProps<Data>) {
+export default function ({ data }: RouteComponentProps<Data>) {
   return <Projects projects={data.allMarkdownRemark.nodes} />;
 }
 
