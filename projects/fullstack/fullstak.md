@@ -7,21 +7,20 @@ screenshot: './fullstack.png'
 github: 'https://github.com/Pong420/fullstack'
 ---
 
-I learn and work on web development for around 4 years. It times to learn
-full-stack development. My Goal:
+A project for learning full-stack development. <br>
+Goal:
 
 <ul>
   <li>
-    <b>Backend</b>：<span>NestJS</span> + <span>Fastify</span>，
-    <span>MongoDB</span> + <span>Typegoose</span>
+    <b>Backend</b>：<a href="https://nestjs.com/">NestJS</a> + <span>Fastify</span> +
+    <span>MongoDB</span>
   </li>
   <li>
     <b>Admin Panel</b>： <span>Create-React-App</span> +
-    <span>Blueprintjs</span>
+    <a href="https://blueprintjs.com/docs/">Blueprintjs</a>
   </li>
   <li>
-    <b>Frontend</b>： <span>NextJS</span> / <span>React Native Web</span> /
-    <span>GatsbyJS</span>
+    <b>Frontend</b>： <span>NextJS</span>
   </li>
   <li><b>App</b>： <span>React Native</span></li>
 </ul>

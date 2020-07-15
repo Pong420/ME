@@ -33,7 +33,7 @@
     "typeface-open-sans": "^0.0.75",
     "typeface-raleway": "^0.0.75",
     "typeface-roboto": "^0.0.75",
-    "video.js": "^7.8.4",
+    "video.js": "7.6.6",
     "videojs-plus": "^1.6.0"
   },
   "devDependencies": {
