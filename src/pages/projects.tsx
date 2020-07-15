@@ -15,7 +15,10 @@ export default function ({ data }: RouteComponentProps<Data>) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: frontmatter___date }) {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___date }
+      filter: { frontmatter: { slug: { ne: "schema" } } }
+    ) {
       nodes {
         content: html
         data: frontmatter {
