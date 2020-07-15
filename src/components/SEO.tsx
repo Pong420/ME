@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import Helmet from 'react-helmet';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 
 export interface SEOProps {
@@ -20,6 +20,7 @@ export interface SiteMetadata {
   title: string;
   description: string;
   author: string;
+  domain: string;
 }
 
 export function SEO({
@@ -33,51 +34,35 @@ export function SEO({
     site: { siteMetadata }
   } = useStaticQuery<SEOQuery>(detailsQuery);
 
-  const htmlAttributes = useMemo(() => ({ lang }), [lang]);
+  const htmlAttributes = { lang };
   const defaultTitle = siteMetadata.title;
   const metaDescription = description || siteMetadata.description;
-  const mergedMeta = useMemo(
-    () =>
-      [
-        {
-          content: metaDescription,
-          name: 'description'
-        },
-        {
-          content: defaultTitle,
-          property: `og:title`
-        },
-        {
-          content: metaDescription,
-          property: `og:description`
-        },
-        {
-          content: `website`,
-          property: `og:type`
-        },
-        {
-          content: `summary`,
-          name: `twitter:card`
-        },
-        {
-          content: siteMetadata.author,
-          name: `twitter:creator`
-        },
-        {
-          content: defaultTitle,
-          name: `twitter:title`
-        },
-        {
-          content: metaDescription,
-          name: `twitter:description`
-        },
-        {
-          content: keywords.join(`, `),
-          name: `keywords`
-        }
-      ].concat(meta),
-    [defaultTitle, metaDescription, siteMetadata.author, keywords, meta]
-  );
+  const mergedMeta = [
+    {
+      content: metaDescription,
+      name: 'description'
+    },
+    {
+      content: defaultTitle,
+      property: `og:title`
+    },
+    {
+      content: metaDescription,
+      property: `og:description`
+    },
+    {
+      content: siteMetadata.domain + '/socialmediashare.png',
+      property: `og:image`
+    },
+    {
+      content: `website`,
+      property: `og:type`
+    },
+    {
+      content: keywords.join(`, `),
+      name: `keywords`
+    }
+  ].concat(meta);
 
   return (
     <Helmet
@@ -96,6 +81,7 @@ const detailsQuery = graphql`
         title
         description
         author
+        domain
       }
     }
   }

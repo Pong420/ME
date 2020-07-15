@@ -3,7 +3,7 @@ module.exports = {
     title: `Pong | Web Developer`,
     description: `I am Pong, a web developer`,
     author: `@Pong`,
-    domain: 'https://pong420.netlify.com'
+    domain: 'https://pong420.netlify.app'
   },
   plugins: [
     {

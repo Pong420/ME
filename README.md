@@ -1,3 +1,3 @@
 ### Hi there 👋
 
-<img src="./src/assets/socialmediashare.png">
+<img src="https://pong420.netlify.app/socialmediashare.png">
