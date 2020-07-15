@@ -13,26 +13,23 @@ export function Project({ content, data, index, matches }: Props) {
 
   return (
     <div className="project">
-      <div className="project-body">
-        <div className="number">{padStart(index)}</div>
+      <div className="number">{padStart(index)}</div>
 
-        <div className="project-head">
-          <div className="project-title">{data.title}</div>
-          <div className="project-date">{getDate(data.date)}</div>
-        </div>
-        <div
-          className="project-content"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-
-        {matches && projectNav}
+      <div className="project-header">
+        <div className="project-title">{data.title}</div>
+        <div className="project-date">{getDate(data.date)}</div>
       </div>
 
       <div className="project-screenshot">
         <Screenshot {...data} />
       </div>
 
-      {!matches && projectNav}
+      <div
+        className="project-description"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
+
+      {projectNav}
     </div>
   );
 }

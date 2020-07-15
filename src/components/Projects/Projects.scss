@@ -12,7 +12,13 @@
       padding: 25px 20px;
 
       > .project {
-        max-width: $max-width;
+        @media (min-width: $break-point-medium + 1) {
+          max-width: $max-width;
+        }
+
+        @media (max-width: $break-point-medium) {
+          max-width: 640px;
+        }
       }
 
       &:nth-child(odd) {
