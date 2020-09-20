@@ -12,6 +12,8 @@ $font-size: 120px;
     font-size: #{$font-size/$break-point-large * 100}vw;
     line-height: 1em;
     opacity: 0.2;
+    user-select: none;
+    pointer-events: none;
 
     @media (min-width: $break-point-medium + 1) {
       font-size: $font-size;
@@ -27,6 +29,13 @@ $font-size: 120px;
     @include typeface('Raleway');
     @include text-overflow-ellipsis();
     font-size: 1.5em;
+
+    &:hover {
+      color: $yellow;
+      &:before {
+        content: '# ';
+      }
+    }
   }
 
   .project-date {
@@ -74,7 +83,7 @@ $font-size: 120px;
         box-shadow: 0px -5px 3px -5px #000 inset;
         color: #333;
         cursor: pointer;
-        min-width: 60px;
+        min-width: 65px;
         outline: none;
         padding: 0.5em 0;
         text-align: center;
@@ -82,7 +91,6 @@ $font-size: 120px;
 
         &:after {
           @include dimen(100%);
-
           content: '';
           display: block;
           padding-bottom: 2px;

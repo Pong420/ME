@@ -1,6 +1,6 @@
 ---
 slug: 'fullstack'
-date: '2019-10'
+date: '2020-01'
 title: 'Learn Full-Stack Development'
 platform: 'web'
 screenshot: './fullstack.png'

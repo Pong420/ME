@@ -12,11 +12,13 @@ export function Project({ content, data, index }: Props) {
   const projectNav = <ProjectNav {...data} />;
 
   return (
-    <div className="project">
+    <div className="project" id={data.slug}>
       <div className="number">{padStart(index)}</div>
 
       <div className="project-header">
-        <div className="project-title">{data.title}</div>
+        <a className="project-title" href={`#${data.slug}`}>
+          {data.title}
+        </a>
         <div className="project-date">{getDate(data.date)}</div>
       </div>
 
