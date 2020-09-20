@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { Schema$Project } from '@/typings';
+import { useMedia } from '@/hooks/useMedia';
 import { Project } from '../Project';
-import { Schema$Project } from '../../typings';
-import { useMedia } from '../../hooks/useMedia';
 
 interface Props {
   projects: Schema$Project[];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Schema$Project } from '../../typings';
+import { Schema$Project } from '@/typings';
 import Img from 'gatsby-image';
 
 type Props = Pick<Schema$Project['data'], 'title' | 'platform' | 'screenshot'>;

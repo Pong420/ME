@@ -1,14 +1,14 @@
 import React from 'react';
+import { Schema$Project } from '@/typings';
 import { ProjectNav } from './ProjectNav';
 import { Screenshot } from '../Screenshot';
-import { Schema$Project } from '../../typings';
 
 interface Props extends Schema$Project {
   index: number;
   matches: boolean;
 }
 
-export function Project({ content, data, index, matches }: Props) {
+export function Project({ content, data, index }: Props) {
   const projectNav = <ProjectNav {...data} />;
 
   return (

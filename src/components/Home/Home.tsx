@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { MeteorsPage } from '../MeteorsPage';
-import Github from '../../assets/github.svg';
-import Telegram from '../../assets/telegram.svg';
+import Github from '@/assets/github.svg';
+import Telegram from '@/assets/telegram.svg';
 
 const style = { marginTop: 20 };
 const text = ['i am', 'Pong', 'a web developer'];

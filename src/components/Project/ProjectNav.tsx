@@ -1,7 +1,7 @@
 import React from 'react';
+import { useBoolean } from '@/hooks/useBoolean';
+import { Schema$Project } from '@/typings';
 import { Player } from '../Player';
-import { useBoolean } from '../../hooks/useBoolean';
-import { Schema$Project } from '../../typings';
 
 type Props = Pick<Schema$Project['data'], 'video' | 'github' | 'link'> & {
   title: string;

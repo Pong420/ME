@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Projects } from '../components/Projects';
-import { RouteComponentProps, Schema$Project } from '../typings';
+import { Projects } from '@/components/Projects';
+import { RouteComponentProps, Schema$Project } from '@/typings';
 
 interface Data {
   allMarkdownRemark: {

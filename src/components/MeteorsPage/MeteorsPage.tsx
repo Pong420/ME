@@ -1,7 +1,7 @@
 import React, { ReactNode, CSSProperties } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { ChildImageSharp } from '@/typings';
 import { Meteors } from './Meteors';
-import { ChildImageSharp } from '../../typings';
 import Img from 'gatsby-image';
 
 interface Props {
