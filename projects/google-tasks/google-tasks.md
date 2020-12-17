@@ -4,7 +4,7 @@ date: '2019-05'
 title: 'Google Tasks Desktop'
 platform: 'desktop'
 screenshot: './google-tasks.png'
-github: 'https://github.com/Pong420/google-tasks-desktop.git'
+github: 'https://github.com/Pong420/google-tasks-desktop'
 video: './google-tasks.mp4'
 ---
 
