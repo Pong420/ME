@@ -5,7 +5,7 @@ title: 'Fullstack'
 platform: ''
 screenshot: './fullstack.png'
 github: 'https://github.com/Pong420/fullstack'
-link: 'https://pong-taisiusyut.herokuapp.com/'
+link: 'http://taisiusyut-demo.herokuapp.com/'
 ---
 
 A project for learning full-stack development. <br/><br/>
