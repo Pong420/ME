@@ -1,10 +1,10 @@
 ---
-slug: 'fullstack'
+slug: 'taisiusyut-fullstack'
 date: '2020-10'
-title: 'Fullstack'
+title: 'taisiusyut-fullstack'
 platform: 'web'
-screenshot: './fullstack.png'
-github: 'https://github.com/Pong420/fullstack'
+screenshot: './taisiusyut-fullstack.png'
+github: 'https://github.com/Pong420/taisiusyut'
 link: 'http://taisiusyut-demo.herokuapp.com/'
 ---
 
