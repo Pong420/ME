@@ -4,7 +4,7 @@ date: '2020-10'
 title: 'taisiusyut-fullstack'
 platform: 'web'
 screenshot: './taisiusyut-fullstack.png'
-github: 'https://github.com/Pong420/taisiusyut'
+github: 'https://github.com/taisiusyut/taisiusyut'
 link: 'http://taisiusyut-demo.herokuapp.com/'
 ---
 
