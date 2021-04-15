@@ -1,10 +1,24 @@
 ---
 slug: 'taisiusyut'
-date: '2019-01'
+date: '2020-10'
 title: '睇小說'
 platform: 'web'
 screenshot: './taisiusyut.png'
+github: 'https://github.com/taisiusyut/taisiusyut'
+link: 'http://taisiusyut.com/'
 ---
 
-<span>睇小說</span> is a self-hosted reader for Chinese web fiction. Content is scrape from the
-internet and return a json api. It built from <span>Create React App</span>.
+A project for learning full-stack development. <br/><br/>
+Goal:
+
+<ul>
+  <li>
+    Server：<a href="https://nestjs.com/">NestJS</a> + <a href="https://github.com/fastify/fastify">Fastify</a> +
+    <span>MongoDB</span>
+  </li>
+  <li>
+    Admin Panel and Web Client： <a href="https://nextjs.org/">NexJS</a> +
+    <a href="https://blueprintjs.com/docs/">Blueprintjs</a>
+  </li>
+  <li>App： <span>React Native</span></li>
+</ul>
