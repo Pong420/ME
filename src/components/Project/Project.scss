@@ -9,7 +9,7 @@ $font-size: 120px;
   .number {
     @include typeface('Open Sans');
     color: #c1c1c1;
-    font-size: #{$font-size/$break-point-large * 100}vw;
+    font-size: #{math.div($font-size, $break-point-large) * 100}vw;
     line-height: 1em;
     opacity: 0.2;
     user-select: none;

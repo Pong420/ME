@@ -10,7 +10,11 @@ $topHeight: 20px;
     &:before {
       $spotSize: 9px;
       @include sq-dimen(9px);
-      @include absolute(($topHeight - $spotSize) / -2 - $spotSize, null, 5px);
+      @include absolute(
+        math.div(($topHeight - $spotSize), -2) - $spotSize,
+        null,
+        5px
+      );
 
       content: '';
       background: #ff5f57;
