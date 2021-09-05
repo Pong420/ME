@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        data: `
+        additionalData: `
           @use "sass:math";
           @import './src/scss/index.scss';
         `,
