@@ -29,6 +29,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
@@ -48,7 +49,6 @@ module.exports = {
         addSassLoader: false
       }
     },
-    'gatsby-plugin-react-helmet',
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-manifest`,

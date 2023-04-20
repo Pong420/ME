@@ -2,7 +2,7 @@ import React, { ReactNode, CSSProperties } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { ChildImageSharp } from '@/typings';
 import { Meteors } from './Meteors';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 interface Props {
   text?: string[];
@@ -26,10 +26,11 @@ export function MeteorsPage({ text = [], children, className }: Props) {
       query={backgroundQuery}
       render={(data: BackgroundQuery) => (
         <div className={`meteors-page ${className}`}>
-          <Img
+          <GatsbyImage
+            image={data.background.childImageSharp.gatsbyImageData}
             className="background"
-            fluid={data.background.childImageSharp.fluid}
             style={style}
+            alt=""
           />
           <Meteors />
           <div className="container">
@@ -47,16 +48,10 @@ export function MeteorsPage({ text = [], children, className }: Props) {
 }
 
 const backgroundQuery = graphql`
-  query {
+  {
     background: file(relativePath: { eq: "background_2560.png" }) {
       childImageSharp {
-        fluid(maxWidth: 2560) {
-          base64
-          aspectRatio
-          src
-          srcSet
-          sizes
-        }
+        gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
       }
     }
   }

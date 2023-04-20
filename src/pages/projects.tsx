@@ -9,14 +9,14 @@ interface Data {
   };
 }
 
-export default function ({ data }: RouteComponentProps<Data>) {
+export default function ProjectsPage({ data }: RouteComponentProps<Data>) {
   return <Projects projects={data.allMarkdownRemark.nodes} />;
 }
 
 export const query = graphql`
-  query {
+  {
     allMarkdownRemark(
-      sort: { fields: frontmatter___date }
+      sort: { frontmatter: { date: ASC } }
       filter: { frontmatter: { slug: { ne: "schema" } } }
     ) {
       nodes {
@@ -28,13 +28,7 @@ export const query = graphql`
           platform
           screenshot {
             childImageSharp {
-              fluid(maxWidth: 1000) {
-                base64
-                aspectRatio
-                src
-                srcSet
-                sizes
-              }
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
             }
           }
           video {

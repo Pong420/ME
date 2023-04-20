@@ -1,4 +1,5 @@
 import { HistoryLocation } from '@reach/router';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 export interface RouteComponentProps<
   Data = any,
@@ -24,15 +25,7 @@ export interface RouteComponentProps<
 }
 
 export interface ChildImageSharp {
-  fluid: Fluid;
-}
-
-export interface Fluid {
-  base64: string;
-  aspectRatio: number;
-  src: string;
-  srcSet: string;
-  sizes: string;
+  gatsbyImageData: IGatsbyImageData;
 }
 
 export interface Schema$Project {
