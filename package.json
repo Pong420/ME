@@ -13,21 +13,6 @@
     "page": "node scripts/page.js",
     "prepare": "husky install"
   },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --rule 'no-console: [\"error\", { allow: [\"warn\", \"error\"] }]'  --max-warnings=0",
-      "prettier --ignore-path .eslintignore --write"
-    ],
-    "{*.json,.{babelrc,eslintrc,prettierrc}}": [
-      "prettier --ignore-path .eslintignore --write"
-    ],
-    "*.{css,scss}": [
-      "prettier --ignore-path .eslintignore --single-quote --write"
-    ],
-    "*.{yml,md}": [
-      "prettier --ignore-path .eslintignore --single-quote --write"
-    ]
-  },
   "dependencies": {
     "lodash": "^4.17.21",
     "react": "^18.2.0",
@@ -63,6 +48,7 @@
     "gatsby-transformer-sharp": "^5.9.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7",
     "sass": "^1.62.0",
     "typescript": "^5.0.4",
     "webpack": "^5.80.0"
