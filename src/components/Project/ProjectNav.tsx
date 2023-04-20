@@ -7,7 +7,10 @@ type Props = Pick<Schema$Project['data'], 'video' | 'github' | 'link'> & {
   title: string;
 };
 
-const ButtonLink: React.FC<{ href?: string }> = ({ href, children }) => {
+const ButtonLink = ({
+  href,
+  children
+}: React.PropsWithChildren<{ href?: string }>) => {
   if (href) {
     return (
       <a href={href} target="_blank" rel="noopener noreferrer">
@@ -38,8 +41,8 @@ export function ProjectNav({ title, github, link, video }: Props) {
   return (
     <div className="project-nav">
       <VideoButton title={title} src={video && video.publicURL} />
-      <ButtonLink href={github} children="Github" />
-      <ButtonLink href={link} children="Link" />
+      <ButtonLink href={github}>Github</ButtonLink>
+      <ButtonLink href={link}>Link</ButtonLink>
     </div>
   );
 }
