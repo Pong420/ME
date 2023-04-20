@@ -8,4 +8,4 @@ github: 'https://github.com/Pong420/boardgame'
 link: 'https://play-boardgame.herokuapp.com/'
 ---
 
-An online board game playground. Including <span>lobby</span>, <span>chat</span>. Build with <span>React</span>, <span>NextJS</span>, <a href="https://boardgame.io">boardgame.io</a> and <span>NextJS</span>
+An online board game playground. Including <span>Lobby</span>, <span>Chat</span>. Build with <span>React</span>, <span>NextJS</span>, <a href="https://boardgame.io">boardgame.io</a> and <span>NextJS</span>

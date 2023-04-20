@@ -8,7 +8,6 @@ github: 'https://github.com/Pong420/videojs-plus'
 link: 'https://pong420.github.io/videojs-plus/examples/'
 ---
 
-<span>VideoJS Plus</span> is an extension and skin for <a href="https://github.com/videojs/video.js">video.js</a>.
-The layout reference from <span>Youtube</span> and responsively designed. The size of the controls depends on the font
-size of the container, so itÏ can be easily customized for different screen size. Also, there are several useful
-plugins. For example, <span>Playlist</span>, <span>Subtitles / Quality selector</span>.
+<span>VideoJS Plus</span> is an extension and skin designed for <a href="https://github.com/videojs/video.js">video.js</a>. that was created to provide a layout similar to <span>Youtube</span> and features a responsive design.
+
+The size of the controls adjusts according to the font size of the container, allowing for easy customization for various screen sizes. Additionally, there are several plugins available, such as <span>Playlist</span>, <span>Subtitles / Quality selector</span>, which offer additional useful functionality.

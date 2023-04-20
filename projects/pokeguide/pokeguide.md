@@ -8,5 +8,4 @@ github: 'https://github.com/Pong420/pokeguide'
 link: 'https://poke-guide.herokuapp.com/app.html'
 ---
 
-<span>Poké Guide</span> is a website provide <span>Pokemon Go</span> information. This project
-built with <span>Vue 1</span>, <span>Gulp</span> and <span>SCSS</span>. ( Project are outdated and closed. )
+Poké Guide</span> is a website that provided information about <span>Pokemon Go</span>. The project wasbuilt with <span>Vue 1</span>, <span>Gulp</span> and <span>SCSS</span>. The project has since been discontinued and is now outdated.

@@ -8,8 +8,8 @@ video: './pkmrpg.mp4'
 link: 'https://pong-pkm.herokuapp.com/index.html'
 ---
 
-I like playing video game, I like <span>Pokemon</span> and I learned program. Then my first self-project ---
-<span>Pokemon RPG</span> started. As a beginner, it is impossible to clone a <span>Pokemon</span> game to a web game. So my
-purpose is creating a challenge
-<a href="https://www.youtube.com/watch?v=f4xL2kEN9Yk">Defeats champion Red with Lv5 pokemon</a>. Finally, I give up the
-project as not enough resource and the mechanism of battle is too complex for me.
+I enjoy playing video games, particularly <span>Pokemon</span>, and have even learned programming. This led me to embark on my first self-project, which was creating a <span>Pokemon RPG</span>. As a novice programmer, I quickly realized that replicating a <span>Pokemon</span> game into a web game was a daunting task.
+
+Consequently, I opted to create a unique challenge for myself, which involved <a href="https://www.youtube.com/watch?v=f4xL2kEN9Yk">Defeats champion Red with Lv5 pokemon</a>.
+
+However, I ultimately abandoned the project due to insufficient resources and the game's complex battle mechanisms that exceeded my current programming skills.

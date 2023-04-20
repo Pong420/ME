@@ -6,6 +6,4 @@ platform: 'web'
 screenshot: './big-two.png'
 ---
 
-This a simple online <span>Big Two</span>. It built with <span>React</span> and
-<a href="https://boardgame.io">boardgame.io</a> which is a Turn-Based Games Engine.
-Already merge into the <a href="#boardgame">boardgame</a> project.
+This is a simple online version of <span>Big Two</span>, which was built using <span>React</span> and <a href="https://boardgame.io">boardgame.io</a>, a turn-based game engine. The project has already been merged into the <a href="#boardgame">boardgame</a> project.
