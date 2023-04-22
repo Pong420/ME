@@ -4,7 +4,7 @@ module.exports = {
     title: `Pong | Web Developer`,
     description: `I am Pong, a web developer`,
     author: `@Pong`,
-    domain: 'https://pong420.netlify.app'
+    domain: 'https://pong420.github.io/Pong420/'
   },
   plugins: [
     {
