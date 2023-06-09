@@ -32,7 +32,7 @@
     "@types/react-helmet": "^6.1.6",
     "@types/video.js": "^7.3.51",
     "eslint-config-react-app": "^7.0.1",
-    "gatsby": "^5.9.0",
+    "gatsby": "^5.9.1",
     "gatsby-plugin-image": "^3.9.0",
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-offline": "^6.9.0",
